@@ -1,5 +1,4 @@
 import React from 'react';
-import { Loader2 } from 'lucide-react';
 
 export interface SpinnerProps {
   size?: number;
@@ -14,14 +13,16 @@ export const Spinner: React.FC<SpinnerProps> = ({
   className = '',
   speed = 1,
 }) => {
-  const spinAnimation = `spin ${speed}s linear infinite`;
-
   return (
-    <Loader2
-      size={size}
-      color={color}
-      className={`animate-spin ${className}`}
-      style={{ animation: spinAnimation }}
+    <div
+      className={`spinner ${className}`}
+      style={{
+        width: size,
+        height: size,
+        borderColor: color,
+        borderTopColor: 'transparent',
+        animationDuration: `${speed}s`,
+      }}
     />
   );
 };
