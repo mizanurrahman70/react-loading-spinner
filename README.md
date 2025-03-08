@@ -5,7 +5,7 @@ A beautiful and customizable React loading spinner component.
 ## Installation
 
 ```bash
-npm install @react-easy-loading-spinner
+npm install react-easy-loading-spinner
 ```
 
 ## Usage
